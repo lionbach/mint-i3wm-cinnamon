@@ -1,0 +1,16 @@
+sudo apt update
+sudo apt install git
+ssh-keygen -t rsa
+# enter
+# enter
+# enter
+
+# in your github page
+# click in your icon profile (top right)
+# Settings
+# SSh and GPG keys
+# New SSh key
+# Complete title
+# copy the output of the following command into key
+
+cat ~/.ssh/id_rsa.pub

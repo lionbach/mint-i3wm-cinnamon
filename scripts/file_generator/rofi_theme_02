@@ -1,0 +1,56 @@
+  background-color: transparent;
+  text-color: @text-main;
+}
+
+
+#window {
+  border: 0;
+  padding: 5;
+  background-color: @enfasis;
+}
+
+#mainbox {
+    border: 0;
+    padding: 10;
+    background-color: @bar-main;
+}
+
+#inputbar {
+    border: 10;
+    padding: 10;
+    background-color: @button-main;
+}
+
+#prompt {
+    border: 0 20 0 0;
+    text-color: @bar-main;
+}
+
+#listview {
+    border: 10;
+    padding: 0;
+    lines: 10;
+}
+
+#element {
+    border: 0;
+    padding: 10;
+}
+
+#element selected.normal {
+    text-color: @text-in-enfasis;
+    background-color: @enfasis;
+}
+#element selected.urgent {
+    text-color: @text-in-enfasis;
+    background-color: @enfasis;
+}
+#element selected.active {
+    text-color: @text-in-enfasis;
+    background-color: @enfasis;
+}
+
+element-icon {
+    size: 32;
+    border: 0 20 0 0;
+}
