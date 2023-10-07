@@ -1,0 +1,71 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+
+general {
+  interval = 1
+  colors = true
+  separator = ""
+  markup = "pango"
+}
+
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "cpu_usage"
+order += "memory"
+order += "disk /"
+order += "volume master"
+order += "battery all"
+order += "tztime date"
+order += "tztime hour"
+
+wireless _first_ {
+  format_up = "<span color='__bg01__' font='LionEnds Bold 12'>Y</span><span bgcolor='__bg01__' color='__text01__'>  %ip - %quality at %essid </span><span bgcolor='__bg01__' color='__color_bar_main__' font='LionEnds Bold 12'>Y</span>"
+  format_down = ""
+}
+
+ethernet _first_ {
+  format_up = "<span color='__bg02__' font='LionEnds Bold 12'>Y</span><span bgcolor='__bg02__' color='__text02__'>  %ip </span><span bgcolor='__bg02__' color='__color_bar_main__' font='LionEnds Bold 12'>Y</span>"
+  format_down = ""
+}
+
+cpu_usage {
+  format = "<span color='__bg03__' font='LionEnds Bold 12'>Y</span><span bgcolor='__bg03__' color='__text03__'>     %usage   </span><span bgcolor='__bg03__' color='__color_bar_main__' font='LionEnds Bold 12'>Y</span>"
+}
+
+memory {
+  format = "<span color='__bg04__' font='LionEnds Bold 12'>Y</span><span bgcolor='__bg04__' color='__text04__'>    %percentage_used  </span><span bgcolor='__bg04__' color='__color_bar_main__' font='LionEnds Bold 12'>Y</span>" 
+}
+
+disk "/" {
+  format = "<span color='__bg05__' font='LionEnds Bold 12'>Y</span><span bgcolor='__bg05__' color='__text05__'>    %percentage_used  </span><span bgcolor='__bg05__' color='__color_bar_main__' font='LionEnds Bold 12'>Y</span>"
+}
+
+volume master {
+  format = "<span color='__bg06__' font='LionEnds Bold 12'>Y</span><span bgcolor='__bg06__' color='__text06__'>   <span font='Font Awesome 6 Free Regular'></span> %volume   </span><span bgcolor='__bg06__' color='__color_bar_main__' font='LionEnds Bold 12'>Y</span>"
+  format_muted = "<span color='__bg06__' font='LionEnds Bold 12'>Y</span><span bgcolor='__bg06__' color='__text06__'>   <span font='Font Awesome 6 Free Regular'></span> %volume   </span><span bgcolor='__bg06__' color='__color_bar_main__' font='LionEnds Bold 12'>Y</span>"
+  device = "pulse"
+}
+
+battery all {
+  format = "" 
+  status_chr = "<span color='__bg07__' font='LionEnds Bold 12'>Y</span><span bgcolor='__bg07__' color='__text07__'>    %percentage   </span><span bgcolor='__bg07__' color='__color_bar_main__' font='LionEnds Bold 12'>Y</span>"
+  status_bat = "<span color='__bg07__' font='LionEnds Bold 12'>Y</span><span bgcolor='__bg07__' color='__text07__'>    %percentage   </span><span bgcolor='__bg07__' color='__color_bar_main__' font='LionEnds Bold 12'>Y</span>"
+  status_unk = "<span color='__bg07__' font='LionEnds Bold 12'>Y</span><span bgcolor='__bg07__' color='__text07__'>  ? %percentage   </span><span bgcolor='__bg07__' color='__color_bar_main__' font='LionEnds Bold 12'>Y</span>"
+  status_full = "<span color='__bg07__' font='LionEnds Bold 12'>Y</span><span bgcolor='__bg07__' color='__text07__'>    %percentage   </span><span bgcolor='__bg07__' color='__color_bar_main__' font='LionEnds Bold 12'>Y</span>"
+  format_down = ""
+  integer_battery_capacity = true
+}
+
+tztime date {
+  format = "<span color='__bg08__' font='LionEnds Bold 12'>Y</span><span bgcolor='__bg08__' color='__text08__'>   %d %b  </span><span bgcolor='__bg08__' color='__color_bar_main__' font='LionEnds Bold 12'>Y</span>"
+}
+
+tztime hour {
+  format = "<span color='__bg09__' font='LionEnds Bold 12'>Y</span><span bgcolor='__bg09__' color='__text09__'>    %H:%M  </span><span bgcolor='__bg09__' color='__color_bar_main__' font='LionEnds Bold 12'>Y</span>"
+}

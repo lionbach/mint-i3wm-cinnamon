@@ -1,0 +1,71 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+
+general {
+  interval = 1
+  colors = true
+  separator = ""
+  markup = "pango"
+}
+
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "cpu_usage"
+order += "memory"
+order += "disk /"
+order += "volume master"
+order += "battery all"
+order += "tztime date"
+order += "tztime hour"
+
+wireless _first_ {
+  format_up = "<span bgcolor='__bg01__' color='__text01__'>  %ip - %quality at %essid </span>"
+  format_down = ""
+}
+
+ethernet _first_ {
+  format_up = "<span bgcolor='__bg02__' color='__text02__'>  %ip </span>"
+  format_down = ""
+}
+
+cpu_usage {
+  format = "<span bgcolor='__bg03__' color='__text03__'>     %usage   </span>"
+}
+
+memory {
+  format = "<span bgcolor='__bg04__' color='__text04__'>    %percentage_used  </span>" 
+}
+
+disk "/" {
+  format = "<span bgcolor='__bg05__' color='__text05__'>    %percentage_used  </span>"
+}
+
+volume master {
+  format = "<span bgcolor='__bg06__' color='__text06__'>   <span font='Font Awesome 6 Free Regular'></span> %volume   </span>"
+  format_muted = "<span bgcolor='__bg06__' color='__text06__'>   <span font='Font Awesome 6 Free Regular'></span> %volume   </span>"
+  device = "pulse"
+}
+
+battery all {
+  format = "" 
+  status_chr = "<span bgcolor='__bg07__' color='__text07__'>    %percentage   </span>"
+  status_bat = "<span bgcolor='__bg07__' color='__text07__'>    %percentage   </span>"
+  status_unk = "<span bgcolor='__bg07__' color='__text07__'>  ? %percentage   </span>"
+  status_full = "<span bgcolor='__bg07__' color='__text07__'>    %percentage   </span>"
+  format_down = ""
+  integer_battery_capacity = true
+}
+
+tztime date {
+  format = "<span bgcolor='__bg08__' color='__text08__'>   %d %b  </span>"
+}
+
+tztime hour {
+  format = "<span bgcolor='__bg09__' color='__text09__'>    %H:%M  </span>"
+}
