@@ -38,7 +38,7 @@ smart_gaps off
 for_window [all] border pixel 5
 # on
 #for_window [class=.*] border normal 5
-for_window [class=".*"] title_format "%class"
+for_window [class=".*"] title_format "%title"
 for_window [all] title_window_icon on
 for_window [all] title_window_icon padding 10px
 
