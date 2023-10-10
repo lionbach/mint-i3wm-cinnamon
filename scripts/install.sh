@@ -13,7 +13,8 @@ echo "deb http://debian.sur5r.net/i3/ jammy universe" | sudo tee /etc/apt/source
 sudo apt update
 
 # instalando i3wm y rofi
-sudo apt install -y i3-wm rofi
+# mplayer se usa para reproducir sonio al cambiar el volumen
+sudo apt install -y i3-wm rofi mplayer
 
 # agregando fuentes para i3-status
 sudo mkdir -p /usr/local/share/fonts/
