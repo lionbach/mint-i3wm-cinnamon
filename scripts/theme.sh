@@ -229,5 +229,6 @@ if [[ $cancel != "" ]]; then
 fi
 
 if [[ $cancel != "" ]]; then
+  touch ~/.config/i3/extra_config
   generateTheme
 fi

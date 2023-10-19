@@ -23,6 +23,8 @@ bindsym XF86AudioPrev exec playerctl previous
 # Brillo de pantalla
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 
+# Screenshot
+bindsym Print exec gnome-screenshot
 
 # Fonts
 font pango: Ubuntu Mono Regular 12 
@@ -34,14 +36,11 @@ gaps outer 0
 smart_gaps off
 
 # Title bar
-# off
-#for_window [all] border pixel 5
-# on
-for_window [all] border normal 5
-#for_window [class=.*] border normal 5
+for_window [all] border pixel 5
 for_window [all] title_format "%title"
 for_window [all] title_window_icon on
 for_window [all] title_window_icon padding 10px
+
 
 # Windows focus
 focus_wrapping no
@@ -229,3 +228,6 @@ mode "resize" {
   bindsym $mod+r mode "default"
 }
 bindsym $mod+r mode "resize"
+
+# Extra config, no edited for script
+include extra_config
