@@ -34,12 +34,12 @@ font pango: Ubuntu Mono Regular 12
 title_align center
 
 # Gaps
-gaps inner 4
+gaps inner 10
 gaps outer 0
 smart_gaps off
 
 # Title bar
-for_window [all] border pixel 2
+for_window [all] border pixel 5
 for_window [all] title_format "%title"
 for_window [all] title_window_icon on
 for_window [all] title_window_icon padding 10px
