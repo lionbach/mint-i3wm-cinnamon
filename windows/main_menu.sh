@@ -13,7 +13,6 @@ win_main_menu(){
                         --column="" --column="Menu"\
                         1           "Install"\
                         2           "Change theme"\
-                        3           "Delete programs"\
                         )
   echo "$opcion"
 }

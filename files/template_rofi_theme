@@ -1,26 +1,22 @@
 * {
-  bar-main: __color_bar_main__;
-  bar-sec: __color_bar_sec__;
-  button-main: __color_button_main__;
-  button-sec: __color_button_sec__;
-  text-main: __color_text_main__;
-  text-sec: __color_text_sec__;
   enfasis: __color_theme__;
-  text-in-enfasis: __color_text_in_color__;
+  window-bg: #222222;
+  entry-bg: #3C3C3C;
+  text-main: #FFFFFF;
+  text-sec: @window-bg;
   background-color: transparent;
-  text-color: @text-main;
 }
 
 window {
   border: 0;
-  padding: 5;
+  padding: 3;
   background-color: @enfasis;
 }
 
 mainbox {
     border: 0;
     padding: 10;
-    background-color: @bar-main;
+    background-color: @window-bg;
     children: [inputbar,listview];
 }
 
@@ -34,14 +30,14 @@ textbox-menu {
     expand: false;
     padding: 10;
     background-color: @enfasis;
-    text-color: @text-in-enfasis;
+    text-color: @text-main;
     str: "Menu";
 }
 
 entry {
     border: 0 0 0 0;
     padding: 10;
-    background-color: @button-main;
+    background-color: @entry-bg;
     text-color: @text-main;
     placeholder: "Search";
     placeholder-color: @text-sec;
@@ -62,8 +58,12 @@ element.selected {
     background-color: @enfasis;
 }
 
+element-text {
+    text-color: @text-main;
+}
+
 element-text.selected {
-    text-color: @text-in-enfasis;
+    text-color: @text-main;
 }
 
 element-icon {

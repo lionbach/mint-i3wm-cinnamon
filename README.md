@@ -29,7 +29,6 @@ Options of menu:
 
 * <b>Install</b> : install and configure mint-i3wm-cinnamon
 * <b>Change theme</b> : select theme for mint-i3wm-cinnamon
-* <b>Delete program</b> : select linux mint software to remove
 
 ## Known issues
 

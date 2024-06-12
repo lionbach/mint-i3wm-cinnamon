@@ -25,9 +25,6 @@ do
     2)
       source ./scripts/theme.sh
       ;;
-    3)
-      source ./scripts/delete_software.sh
-      ;;
     *)
       main_menu=99
       ;;

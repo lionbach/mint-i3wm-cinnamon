@@ -34,12 +34,12 @@ font pango: Ubuntu Mono Regular 12
 title_align center
 
 # Gaps
-gaps inner 4
+gaps inner 20
 gaps outer 0
 smart_gaps off
 
 # Title bar
-for_window [all] border pixel 2
+for_window [all] border pixel 3
 for_window [all] title_format "%title"
 for_window [all] title_window_icon on
 for_window [all] title_window_icon padding 10px
@@ -55,23 +55,13 @@ force_display_urgency_hint 3000 ms
 ##################################################
 
 # theme color
-set $color_theme       "__color_theme__"
-set $color_theme_b     "__color_theme_b__"
-# mode light or dark
-set $color_bar_main    "__color_bar_main__"
-set $color_bar_sec     "__color_bar_sec__"
-set $color_button_main "__color_button_main__"
-set $color_button_sec  "__color_button_sec__"
-set $color_text_main   "__color_text_main__"
-set $color_text_sec    "__color_text_sec__"
-# others colors
-set $color_text_in_color  "__color_text_in_color__"
-set $color_urgent         "__color_urgent__"
-# class                 border_title       background_title   text                  indicator          border_window
-client.focused          $color_theme       $color_theme       $color_text_in_color  $color_theme_b     $color_theme
-client.focused_inactive $color_bar_main    $color_bar_main    $color_text_main      $color_bar_main    $color_bar_main
-client.unfocused        $color_button_main $color_button_main $color_text_main      $color_button_main $color_button_main
-client.urgent           $color_urgent      $color_urgent      $color_text_in_color  $color_urgent      $color_urgent
+set $color "__color_theme__"
+# class                 border  bground text    indicator child_border
+client.focused          $color  #2C2C2C #FFFFFF $color    $color
+client.focused_inactive #404040 #404040 #FFFFFF #404040   #404040
+client.unfocused        #404040 #404040 #777777 #404040   #404040
+client.urgent           #FF4444 #FF4444 #FFFFFF #FF4444   #FF4444
+client.placeholder      #E95420 #E95420 #FFFFFF #E95420   #E95420
 client.background       #FFFFFF
 
 ##################################################
@@ -80,23 +70,20 @@ client.background       #FFFFFF
 
 bar {
   status_command i3status
-  mode dock
-  modifier none
   position top
-  padding 1px
-  tray_padding 3
-  workspace_min_width 40
+  padding 2px 0px
+  tray_padding 4px
+  workspace_min_width 35
+  separator_symbol "    "
   colors {
-    # barra
-    background $color_bar_main
-    statusline $color_text_main
-    separator $color_theme
-    # boton workspace  borde           fondo              letra)
-    focused_workspace  $color_bar_main $color_theme       $color_text_in_color
-    active_workspace   $color_theme    $color_button_main $color_text_main
-    inactive_workspace $color_bar_main $color_button_main $color_text_main
-    urgent_workspace   $color_bar_main $color_urgent      $color_text_in_color
-    binding_mode       $color_bar_main $color_button_sec  $color_text_sec
+    background #131313
+    statusline #FFFFFF
+    separator  #E95420
+    focused_workspace  #131313 #404040 #FFFFFF
+    active_workspace   #131313 #131313 #FFFFFF
+    inactive_workspace #131313 #131313 #777777
+    urgent_workspace   #131313 #131313 #FF4444
+    binding_mode       #131313 #E95420 #FFFFFF
   }  
 }
 
