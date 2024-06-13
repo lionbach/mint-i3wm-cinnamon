@@ -32,3 +32,12 @@ cd i3-cinnamon-master
 sudo make install
 cd ..
 rm -r i3-cinnamon-master
+
+# confi for use keys to modify display brightnes
+sudo apt install -y brightnessctl
+sudo touch /etc/udev/rules.d/90-brightnessctl.rules
+echo 'ACTION=="add", SUBSYSTEM=="backlight", RUN+="/bin/chgrp video /sys/class/backlight/%k/brightness"
+ACTION=="add", SUBSYSTEM=="backlight", RUN+="/bin/chmod g+w /sys/class/backlight/%k/brightness"
+ACTION=="add", SUBSYSTEM=="leds", RUN+="/bin/chgrp input /sys/class/leds/%k/brightness"
+ACTION=="add", SUBSYSTEM=="leds", RUN+="/bin/chmod g+w /sys/class/leds/%k/brightness"' | sudo tee /etc/udev/rules.d/90-brightnessctl.rules
+sudo usermod -a -G video $(whoami)

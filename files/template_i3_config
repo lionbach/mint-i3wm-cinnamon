@@ -24,8 +24,8 @@ bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 # Brillo de pantalla
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 # Screenshot
 bindsym Print exec gnome-screenshot
 
