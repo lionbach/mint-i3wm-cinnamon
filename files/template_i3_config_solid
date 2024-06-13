@@ -39,7 +39,7 @@ gaps outer 0
 smart_gaps off
 
 # Title bar
-for_window [all] border pixel 2
+for_window [all] border pixel 3
 for_window [all] title_format "%title"
 for_window [all] title_window_icon on
 for_window [all] title_window_icon padding 10px
@@ -71,7 +71,7 @@ client.background       #FFFFFF
 bar {
   status_command i3status
   position top
-  padding 2px 2px
+  padding 2px 0px
   tray_padding 4px
   workspace_min_width 35
   separator_symbol "    "
@@ -79,12 +79,11 @@ bar {
     background #131313
     statusline #FFFFFF
     separator  #E95420
-    #                  border  bground text
-    focused_workspace  $color  #131313 $color
+    focused_workspace  #131313 #404040 #FFFFFF
     active_workspace   #131313 #131313 #FFFFFF
-    inactive_workspace #131313 #131313 #707070
-    urgent_workspace   #FF4444 #131313 #FF4444
-    binding_mode       $color  #131313 $color
+    inactive_workspace #131313 #131313 #777777
+    urgent_workspace   #131313 #131313 #FF4444
+    binding_mode       #131313 #E95420 #FFFFFF
   }  
 }
 
