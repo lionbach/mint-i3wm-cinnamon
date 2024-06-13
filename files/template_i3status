@@ -19,8 +19,8 @@ general {
 order += "cpu_usage"
 order += "memory"
 #order += "disk /"
-order += "volume master"
 order += "battery all"
+order += "volume master"
 order += "tztime date"
 order += "tztime hour"
 
@@ -53,11 +53,11 @@ volume master {
 }
 
 battery all {
-  format = "" 
-  status_chr = " %percentage"
-  status_bat = " %percentage"
-  status_unk = "? %percentage"
-  status_full = " %percentage"
+  format = "%status %percentage"
+  status_chr = ""
+  status_bat = ""
+  status_unk = "?"
+  status_full = ""
   format_down = ""
   integer_battery_capacity = true
 }
