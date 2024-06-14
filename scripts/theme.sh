@@ -11,6 +11,9 @@ generateTheme() {
   mkdir -p ~/.config/i3
   cp ./files/template_i3_config ~/.config/i3/config
   sed -i "s/__color_theme__/$color_theme/g" ~/.config/i3/config
+  cp ./files/bindsym_script.sh ~/.config/i3/bindsym_script.sh
+  cp ./files/shutdown_options_script.sh ~/.config/i3/shutdown_options_script.sh
+  
 
   # rofi
   mkdir -p ~/.config/rofi
@@ -20,7 +23,11 @@ generateTheme() {
 
   # i3status
   mkdir -p ~/.config/i3status
-  cp ./files/template_i3status ~/.config/i3status/config  
+  cp ./files/template_i3status ~/.config/i3status/config
+  cp ./files/windows_title_script.sh ~/.config/i3status/windows_title_script.sh
+  sed -i "s/__color_theme__/$color_theme/g" ~/.config/i3status/config
+  touch ~/.config/i3status/brightness_level
+  touch ~/.config/i3status/windows_title
 }
 
 #Menus para elegir estilos
