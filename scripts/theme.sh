@@ -36,6 +36,6 @@ color=$(win_color_menu)
 cancel=$color
 
 if [[ $cancel != "" ]]; then
-  touch ~/.config/i3/extra_config
   generateTheme
+  touch ~/.config/i3/extra_config
 fi
