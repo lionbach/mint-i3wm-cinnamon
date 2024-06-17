@@ -221,6 +221,5 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# Extra config, no edited for script
-include extra_config
-exec --no-startup-id bash ~/.config/i3status/windows_title_script.sh
+# Extra config
+#exec --no-startup-id bash ~/.config/i3status/windows_title_script.sh
