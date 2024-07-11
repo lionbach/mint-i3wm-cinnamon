@@ -195,6 +195,9 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 # toggle tiling / floating
 bindsym $mod+Shift+f floating toggle
+# scratchpad
+bindsym $mod+o move scratchpad
+bindsym $mod+m scratchpad show
 
 # Hide i3bar
 bindsym $mod+b bar mode toggle
@@ -222,4 +225,5 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Extra config
+include ~/.config/i3/config_extra
 #exec --no-startup-id bash ~/.config/i3status/windows_title_script.sh

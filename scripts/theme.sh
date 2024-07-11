@@ -11,6 +11,7 @@ generateTheme() {
   mkdir -p ~/.config/i3
   cp ./files/template_i3_config ~/.config/i3/config
   sed -i "s/__color_theme__/$color_theme/g" ~/.config/i3/config
+  cp ./files/template_i3_config_extra ~/.config/i3/config_extra
   cp ./files/bindsym_script.sh ~/.config/i3/bindsym_script.sh
   cp ./files/shutdown_options_script.sh ~/.config/i3/shutdown_options_script.sh
   

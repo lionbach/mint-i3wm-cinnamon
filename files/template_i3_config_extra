@@ -1,0 +1,9 @@
+#for_window [instance="gnome-screenshot"] floating enable
+#for_window [instance="crx_nngceckbapebfimnlniiiahkandclblb"] floating enable
+#for_window [class="Google-chrome" window_role="pop-up"] floating enable
+#for_window [title="meet.google.com está compartiendo tu pantalla."] move scratchpad
+#for_window [title="meet.google.com is sharing your screen."] move scratchpad
+#exec --no-startup-id xrandr -s 1600x900
+
+# for_window [instance="pulseUI"] floating enable
+#exec --no-startup-id xrandr --output HDMI-0 --scale 1.2
